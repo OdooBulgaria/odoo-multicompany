@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <!-- Sequences -->
+        view_sequence_search
+        <record id="view_multicompany_search" model="ir.ui.view">
+            <field name="name">ir.sequence.multicompany.seach</field>
+            <field name="model">ir.sequence</field>
+            <field name="inherit_id" ref="view_sequence_search"/>
+            <field name="arch" type="xml">
+                <filter domain="[('company_id','=',company_id)]"
+                        help="My Company"/>
+            </field>
+        </record>
+
+
+
+    </data>
+</openerp>
