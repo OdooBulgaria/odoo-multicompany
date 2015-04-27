@@ -33,7 +33,7 @@
         'base'
     ],
     'data': [
-        'views/ir_sequence_view.xml'
+        'security/ir_sequence_security.xml',
     ],
     'installable': True,
 }

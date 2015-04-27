@@ -1,1 +1,4 @@
-Modulos para la mejora de la gestion multicompany
+```multicompany_sequence ```
+====
+Establece un filtro en las sequencias por compañia del usuario
+
