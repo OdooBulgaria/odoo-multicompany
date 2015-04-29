@@ -1,13 +1,13 @@
-```multicompany_sequence ```
-====
+# ```multicompany_sequence ```
+
 * Establece un filtro en las sequencias por compañia del usuario.
 
-```multicompany_account_account ```
-====
+# ```multicompany_account_account ```
+
 * Establece un group by por compañia en la vista de cuentas contables.
 
-```multicompany_fiscalyear ```
-====
+# ```multicompany_fiscalyear ```
+
 * En estructuras multiempresa del tipo padre / hijo, si desde la empresa 
 padre queremos seleccionar un ejercicio a nivel de informes, nos salen los 
 ejercicios de la empresa padre y de cada una de las hijas. Si usamos son 
