@@ -12,5 +12,6 @@
                         context="{'group_by':'company_id'}"/>
             </xpath>
         </field>
+        </record>
     </data>
 </openerp>
