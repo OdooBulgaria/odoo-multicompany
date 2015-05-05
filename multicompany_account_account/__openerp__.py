@@ -30,7 +30,8 @@
     """,
     'author': 'Trey Kilobytes de Soluciones (www.trey.es)',
     'depends': [
-        'base'
+        'base',
+        'account',
     ],
     'data': [
         'views/account_account_view.xml',

@@ -2,16 +2,28 @@
 <openerp>
     <data>
         <record id="view_account_multicompany_search" model="ir.ui.view">
-        <field name="name">account.account.multicompany.search</field>
-        <field name="model">account.account</field>
-        <field name="inherit_id" ref="account.view_account_search"/>
-        <field name="arch" type="xml">
-            <xpath expr="//filter[@string='Internal Type']"
-                   position="after">
-                <filter string="Company" domain="[]"
-                        context="{'group_by':'company_id'}"/>
-            </xpath>
-        </field>
+            <field name="name">account.account.multicompany.search</field>
+            <field name="model">account.account</field>
+            <field name="inherit_id" ref="account.view_account_search"/>
+            <field name="arch" type="xml">
+                <xpath expr="//filter[@string='Internal Type']"
+                       position="after">
+                    <filter string="Company" domain="[]"
+                            context="{'group_by':'company_id'}"/>
+                </xpath>
+            </field>
+        </record>
+        <record id="view_account_multicompany_form" model="ir.ui.view">
+            <field name="name">account.account.multicompany.form</field>
+            <field name="model">account.account</field>
+            <field name="inherit_id" ref="account.view_account_form"/>
+            <field name="arch" type="xml">
+                <field name="child_consol_ids" position="replace">
+                    <field name="child_consol_ids"
+                           attrs="{'invisible':[('type','!=','consolidation')]}"
+                           widget="many2many"/>
+                </field>
+            </field>
         </record>
     </data>
 </openerp>

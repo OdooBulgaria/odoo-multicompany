@@ -37,5 +37,5 @@ class AccountFiscalYear(models.Model):
         for fiscalyear in self:
             name = "%s-%s" % (fiscalyear.name,
                               fiscalyear.company_id.name or '')
-            result.append(((fiscalyear.id, " %s" % ( name or ''))))
+            result.append((fiscalyear.id, " %s" % (name or '')))
         return result

@@ -4,7 +4,10 @@
 
 # ```multicompany_account_account ```
 
-* Establece un group by por compañia en la vista de cuentas contables.
+* Establece un group by por compañia en la vista de cuentas contables. 
+Ademas cambia el widget del campo "child_consol_ids" Hijos consolidados del 
+tipo many2many_tag a many2many normal para poder seleccionar varias cuentas 
+a la vez y tener el campo empresa en la visualizacion.
 
 # ```multicompany_fiscalyear ```
 
