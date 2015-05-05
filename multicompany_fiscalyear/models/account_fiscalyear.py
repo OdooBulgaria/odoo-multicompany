@@ -39,3 +39,19 @@ class AccountFiscalYear(models.Model):
                               fiscalyear.company_id.name or '')
             result.append((fiscalyear.id, " %s" % (name or '')))
         return result
+
+
+class AccountPeriod(models.Model):
+    _inherit = 'account.period'
+
+
+    @api.multi
+    def name_get(self):
+        if isinstance(self.ids, (list, tuple)) and not len(self.ids):
+            return []
+        result = []
+        for period in self:
+            name = "%s-%s" % (period.name,
+                              period.company_id.name or '')
+            result.append((period.id, " %s" % (name or '')))
+        return result
